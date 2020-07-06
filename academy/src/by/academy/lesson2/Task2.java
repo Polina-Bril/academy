@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 package by.academy.lesson2;
+=======
+>>>>>>> branch 'master' of https://github.com/Polina-Bril/academy.git
 
 public class Task2 {
 
