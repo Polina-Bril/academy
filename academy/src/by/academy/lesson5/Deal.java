@@ -41,4 +41,16 @@ public class Deal {
 		this.products = products;
 	}
 
+	public double getSumma() {
+		double sum = 0;
+		for (Product p : products) {
+			sum += p.getPrice() * p.getQuantity();
+		}
+		return sum;
+	}
+
+	public void getBlaBlaBla(Deal deal) {
+		System.out.println("Покупатель - " + buyer + ", продавец - " + seller + ", продукты: " + products
+				+ ". Общая сумма сделки =" + getSumma());
+	}
 }

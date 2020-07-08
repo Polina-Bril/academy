@@ -8,10 +8,11 @@ public class Product {
 	public Product(){
 		super();
 	}
-	public Product (double price, String name) {
+	public Product (String name, double price, int quantity) {
 		super();
 		this.price = price;
 		this.name = name;
+		this.quantity = quantity;
 	}
 	public void setName (String name) {
 		this.name=name;

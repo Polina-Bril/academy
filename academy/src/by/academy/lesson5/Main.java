@@ -17,7 +17,7 @@ public class Main {
 		String s2 = sc.nextLine();
 		buyer.setName(s2);
 
-		String products[] = new String[3];
+		Product products[] = new Product [3];
 		Product pr1 = new Product();
 		System.out.println("¬ведите название первого продукта");
 		String s3 = sc.nextLine();
@@ -28,7 +28,7 @@ public class Main {
 		System.out.println("¬ведите количество первого продукта");
 		int s11 = sc.nextInt();
 		pr1.setPrice(s11);
-		products[0] = s3;
+		products[0] = new Product (s3, s4, s11);
 
 		Product pr2 = new Product();
 		System.out.println("¬ведите название второго продукта");
@@ -40,7 +40,7 @@ public class Main {
 		System.out.println("¬ведите количество второго продукта");
 		int s12 = sc.nextInt();
 		pr1.setPrice(s12);
-		products[1] = s5;
+		products[1] = new Product (s5, s6, s12);
 
 		Product pr3 = new Product();
 		System.out.println("¬ведите название третьего продукта");
@@ -52,10 +52,10 @@ public class Main {
 		System.out.println("¬ведите количество третьего продукта");
 		int s13 = sc.nextInt();
 		pr1.setPrice(s13);
-		products[2] = s7;
+		products[3] = new Product (s7, s8, s13);
 
 		Deal deal1 = new Deal(seller, buyer, products);
-//		Deal deal2 = new Deal();
+		Deal deal2 = new Deal(seller, buyer, products);
 
 		sc.close();
 	}
