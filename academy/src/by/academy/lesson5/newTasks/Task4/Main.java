@@ -13,14 +13,14 @@ public class Main {
 			Reader one = new Reader();
 			ona[i]= one;
 			System.out.println("Введите ФИО следующего читателя");
-			ona[i].setFio(sc.next());
+			ona[i].setFio(sc.nextLine());
 			n=(int)(Math.random()*5);
 			ona[i].takeBook(n);
 			String knigi[]=new String[n];
 			Book books []= new Book[n];
 			for (int j=1;j<=n;j++) {
 				System.out.println("Введите название "+j+" книги");
-				String s=sc.next();
+				String s=sc.nextLine();
 				knigi[j-1]=s;
 				Book bro= new Book();
 				books[j-1]=bro;
@@ -36,7 +36,7 @@ public class Main {
 			Book books1 []= new Book[m];
 			for (int j=1;j<=m;j++) {
 				System.out.println("Введите название "+j+" книги");
-				String s=sc.next();
+				String s=sc.nextLine();
 				knigi1[j-1]=s;
 				Book bro= new Book();
 				books1[j-1]=bro;
