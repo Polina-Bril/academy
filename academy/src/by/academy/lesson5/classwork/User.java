@@ -1,4 +1,4 @@
-package by.academy.lesson5;
+package by.academy.lesson5.classwork;
 
 public class User {
 	private String name;

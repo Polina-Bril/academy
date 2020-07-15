@@ -1,4 +1,4 @@
-package by.academy.lesson5;
+package by.academy.lesson5.classwork;
 
 public class Deal {
 
@@ -49,8 +49,8 @@ public class Deal {
 		return sum;
 	}
 
-	public void getBlaBlaBla(Deal deal) {
-		System.out.println("Покупатель - " + buyer + ", продавец - " + seller + ", продукты: " + products
-				+ ". Общая сумма сделки =" + getSumma());
+	public void getBlaBlaBla() {
+		System.out.println("Покупатель - " + buyer.getName() + ", продавец - " + seller.getName() + ", количество продуктов: " + products.length
+				+ ". Общая сумма сделки = " + getSumma());
 	}
 }
