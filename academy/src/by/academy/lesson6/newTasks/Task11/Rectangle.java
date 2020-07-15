@@ -1,4 +1,4 @@
-package by.academy.lesson6;
+package by.academy.lesson6.newTasks.Task11;
 
 public class Rectangle extends Shape{
 	
