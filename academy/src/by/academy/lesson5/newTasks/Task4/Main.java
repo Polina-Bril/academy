@@ -24,7 +24,7 @@ public class Main {
 				knigi[j-1]=s;
 				Book bro= new Book();
 				books[j-1]=bro;
-				books[j-1].name=s;
+				books[j-1].setName(s);
 		}
 			ona[i].takeBook(knigi);
 			System.out.println();
@@ -40,7 +40,7 @@ public class Main {
 				knigi1[j-1]=s;
 				Book bro= new Book();
 				books1[j-1]=bro;
-				books1[j-1].name=s;
+				books1[j-1].setName(s);
 		}
 			ona[i].returnBook(knigi1);
 			System.out.println();

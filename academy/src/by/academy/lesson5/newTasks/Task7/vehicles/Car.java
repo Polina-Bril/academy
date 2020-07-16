@@ -5,16 +5,18 @@ import by.academy.lesson5.newTasks.Task7.professions.Driver;
 
 public class Car {
 
-	String markaAvto;
-	String klassAvto;
-	double ves;
-	Driver driver;
-	Engine engine;
+	private String markaAvto;
+	private String klassAvto;
+	private double ves;
+	private Driver driver;
+	private Engine engine;
 
 	public Car() {
+		super();
 	}
 
 	public Car(String markaAvto, String klassAvto, double ves, Driver driver, Engine engine) {
+		super();
 		this.markaAvto = markaAvto;
 		this.klassAvto = klassAvto;
 		this.ves = ves;
@@ -40,7 +42,48 @@ public class Car {
 
 	public void printInfo() {
 		System.out.println("Информация об автомобиле: марка - " + markaAvto + ", класс - " + klassAvto + ", вес - "
-				+ ves + " т, водитель - " + driver.fio + ", мотор - " + engine.getMosch()
+				+ ves + " т, водитель - " + driver.getFio() + ", мотор - " + engine.getMosch()
 				+ " лошадей, мотор произведен фирмой " + engine.getProizvoditel());
 	}
+
+	public String getMarkaAvto() {
+		return markaAvto;
+	}
+
+	public void setMarkaAvto(String markaAvto) {
+		this.markaAvto = markaAvto;
+	}
+
+	public String getKlassAvto() {
+		return klassAvto;
+	}
+
+	public void setKlassAvto(String klassAvto) {
+		this.klassAvto = klassAvto;
+	}
+
+	public double getVes() {
+		return ves;
+	}
+
+	public void setVes(double ves) {
+		this.ves = ves;
+	}
+
+	public Driver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(Driver driver) {
+		this.driver = driver;
+	}
+
+	public Engine getEngine() {
+		return engine;
+	}
+
+	public void setEngine(Engine engine) {
+		this.engine = engine;
+	}
+	
 }

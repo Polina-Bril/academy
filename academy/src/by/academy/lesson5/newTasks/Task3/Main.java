@@ -10,9 +10,9 @@ public class Main {
 		int stolbcovv2 = 2;
 		double[][]two = {{10, 100, 10},{100, 10, 1,},{100, 1, 10}};
 		Matrice ona = new Matrice();
-		ona.massive=one;
-		ona.strok=stroka;
-		ona.stolbcov=stolbcovv;
+		ona.setMassive(one);
+		ona.setStrok(stroka);
+		ona.setStolbcov(stolbcovv);
 		ona.print();
 		System.out.println();
 		ona.umnozh(10);

@@ -10,6 +10,7 @@ public class Engine {
 	}
 
 	public Engine(int mosch, String proizvoditel) {
+		super();
 		this.mosch = mosch;
 		this.proizvoditel = proizvoditel;
 	}

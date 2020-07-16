@@ -2,15 +2,14 @@ package by.academy.lesson5.newTasks.Task8;
 
 public class Horse extends Animal{
 	
-	String mast;
+	private String mast;
 		
 	public Horse() {
+		super();
 	}
 	public Horse (String food, String location, String mast, String name) {
-		this.food=food;
-		this.location=location;
+		super(food, location, name);
 		this.mast=mast;
-		this.name=name;
 	}
 	public void makeNoise() {
 		System.out.println(name+" ржет");
@@ -18,4 +17,11 @@ public class Horse extends Animal{
 	public void eat() {
 		System.out.println(name+" чавкает");
 	}
+	public String getMast() {
+		return mast;
+	}
+	public void setMast(String mast) {
+		this.mast = mast;
+	}
+	
 }

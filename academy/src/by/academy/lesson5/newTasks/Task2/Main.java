@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Person sasha = new Person();
-		sasha.fullName= "Александр Сергеевич";
+		sasha.setFullName("Александр Сергеевич");
 		Person dasha = new Person("Дарья Сергеевна", 18);
 		
 		sasha.talk();

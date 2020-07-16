@@ -5,10 +5,10 @@ import by.academy.lesson5.newTasks.Task7.professions.Driver;
 
 public class Lorry extends Car {
 
-	int gruzopodem;
+	private int gruzopodem;
 
 	public Lorry() {
-
+		super();
 	}
 
 	public Lorry(String markaAvto, String klassAvto, double ves, Driver driver, Engine engine, int gruzopodem) {
@@ -16,4 +16,12 @@ public class Lorry extends Car {
 		this.gruzopodem = gruzopodem;
 	}
 
+	public int getGruzopodem() {
+		return gruzopodem;
+	}
+
+	public void setGruzopodem(int gruzopodem) {
+		this.gruzopodem = gruzopodem;
+	}
+	
 }
