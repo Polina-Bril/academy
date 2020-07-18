@@ -5,40 +5,56 @@ public class Product {
 	protected String name;
 	protected int quantity;
 	protected String type;
-	
-	public Product(){
+
+	public Product() {
 		super();
 	}
-	public Product (String name, double price, int quantity, String type) {
+
+	public Product(String name, double price, int quantity, String type) {
 		super();
 		this.price = price;
 		this.name = name;
 		this.quantity = quantity;
 		this.type = type;
-		
+
 	}
-	public void setName (String name) {
-		this.name=name;
+
+	public Product(String name, int quantity, String type) {
+		super();
+		this.name = name;
+		this.quantity = quantity;
+		this.type = type;
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getName() {
 		return name;
 	}
-	public void setPrice (double price) {
-		this.price=price;
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
+
 	public double getPrice() {
 		return price;
 	}
-	public void setQuantity (int quantity) {
-		this.quantity=quantity;
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
-	public int getQuantity () {
+
+	public int getQuantity() {
 		return quantity;
 	}
-	public void setType (String type) {
+
+	public void setType(String type) {
 		this.type = type;
 	}
-	public String getType () {
+
+	public String getType() {
 		return type;
 	}
 }
