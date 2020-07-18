@@ -39,6 +39,7 @@ public class Main {
 		}
 		Deal deal = new Deal(seller, buyer, products);
 		deal.getBlaBlaBla();
+		deal.getSumma();
 
 		sc.close();
 	}
