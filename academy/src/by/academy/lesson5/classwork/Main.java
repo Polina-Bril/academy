@@ -30,16 +30,16 @@ public class Main {
 			System.out.println("Выберите тип продукта: продукт1, продукт2 или продукт3");
 			String s6 = sc.next();
 
-			if (s6 == "продукт1")
+			if (s6.equals("продукт1"))
 				products[i] = new Product1(s3, s4, s5, s6);
-			else if (s6 == "продукт2")
+			else if (s6.equals("продукт2"))
 				products[i] = new Product2(s3, s4, s5, s6);
-			else if (s6 == "продукт3")
+			else if (s6.equals("продукт3"))
 				products[i] = new Product3(s3, s4, s5, s6);
 		}
 		Deal deal = new Deal(seller, buyer, products);
 		deal.getBlaBlaBla();
-		deal.getSumma();
+//		deal.getSumma();
 
 		sc.close();
 	}

@@ -51,6 +51,6 @@ public class Deal {
 
 	public void getBlaBlaBla() {
 		System.out.println("Покупатель - " + buyer.getName() + ", продавец - " + seller.getName()
-				+ ", количество продуктов: " + products.length + ". Общая сумма сделки = "); // + getSumma());
+				+ ", количество продуктов: " + products.length + ". Общая сумма сделки = " + getSumma());
 	}
 }
