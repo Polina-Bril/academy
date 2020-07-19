@@ -5,16 +5,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Task1 {
-	
+
 //	1. Найти в строке не только запятые, но и другие знаки препинания. Подсчитать общее их количество
 
 	public static void main(String[] args) {
 
 		String s = "Найти в строке не только запятые, но и другие знаки препинания." + "общее их количество!";
-		 String[] arr = s.split("[,.!?]");
-		 System.out.println(arr.length);
 
-		long startMS = System.currentTimeMillis();
 		Pattern p = Pattern.compile("[,.!?]");
 		Matcher m = p.matcher(s);
 
@@ -23,9 +20,6 @@ public class Task1 {
 			counter++;
 		}
 		System.out.println("Counter: " + counter);
-
-		long endMS = System.currentTimeMillis();
-		System.out.println(endMS - startMS);
 
 	}
 
