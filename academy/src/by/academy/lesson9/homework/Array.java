@@ -61,9 +61,22 @@ public class Array<T> {
 		}
 	}
 
-	void addToEnd(T dataType, T[]items){
-		 setItems(new (T getDataType) [items.length+1]);
-		 this.items[items.length+1]= dataType;
-		 
-	 }
+	void addToEnd(T dataType, T[] items) {
+		Object[] items1 = new Object[items.length + 1];
+		items1[items1.length - 1] = dataType;
+		for (int i = 0; i < items.length; i++) {
+			items1[i] = items[i];
+		}
+		this.items = (T[]) items1;
+		// System.arraycopy(items, 0, items1, 0, items.lentgh)
+
+	}
+
+	void addToIndex(T dataType, T[] items, int index) {
+		Object[] items1 = new Object[items.length * 2];
+		System.arraycopy(items, 0, items1, 0, index);
+		items1[index] = dataType;
+		System.arraycopy(items, index, items1, index + 1, items.length - index);
+		this.items = (T[]) items1;
+	}
 }
