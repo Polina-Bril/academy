@@ -57,4 +57,9 @@ public class Product {
 	public String getType() {
 		return type;
 	}
+
+	@Override
+	public String toString() {
+		return "Product [price=" + price + ", name=" + name + ", quantity=" + quantity + ", type=" + type + "]";
+	}
 }
