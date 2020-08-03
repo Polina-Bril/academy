@@ -73,13 +73,9 @@ public class Date {
 	public long numberOfDays(String date1, String date2) {
 		SimpleDateFormat format = new SimpleDateFormat("dd-M-yyyy");
 		java.util.Date day1 = null;
-		try {
-			day1 = format.parse(date1);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		java.util.Date day2 = null;
 		try {
+			day1 = format.parse(date1);
 			day2 = format.parse(date2);
 		} catch (Exception e) {
 			e.printStackTrace();
