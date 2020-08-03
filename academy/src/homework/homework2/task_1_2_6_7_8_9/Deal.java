@@ -1,27 +1,19 @@
-package by.academy.lesson11;
+package homework.homework2.task_1_2_6_7_8_9;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.List;
 import java.util.Scanner;
 
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.Product;
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.Product1;
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.Product2;
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.Product3;
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.User;
-
-public class DealRefactor {
+public class Deal {
 
 	private User seller;
 	private User buyer;
-	private ArrayList<Product> products;
+	private Product[] products;
 	private String deadline;
 
-	public DealRefactor() {
+	public Deal() {
 		super();
 		Date now = new Date();
 		Calendar c = new GregorianCalendar();
@@ -32,7 +24,7 @@ public class DealRefactor {
 		this.deadline = format.format(c.getTime());
 	}
 
-	public DealRefactor(User seller, User buyer, ArrayList<Product> products) {
+	public Deal(User seller, User buyer, Product[] products) {
 		super();
 		this.seller = seller;
 		this.buyer = buyer;
@@ -62,11 +54,11 @@ public class DealRefactor {
 		this.buyer = buyer;
 	}
 
-	public ArrayList<Product> getProducts() {
+	public Product[] getProducts() {
 		return products;
 	}
 
-	public void setProducts(ArrayList<Product> products) {
+	public void setProducts(Product[] products) {
 		this.products = products;
 	}
 
@@ -84,7 +76,7 @@ public class DealRefactor {
 
 	public void getBlaBlaBla() {
 		System.out.println("Покупатель - " + buyer.getName() + ", продавец - " + seller.getName()
-				+ ". Продукты в сделке: " + products + ". Общая сумма сделки = " + getSumma());
+				+ ", количество продуктов: " + products.length + ". Общая сумма сделки = " + getSumma());
 	}
 
 	public void menu(int n) {
@@ -94,25 +86,24 @@ public class DealRefactor {
 		int s9 = sc.nextInt();
 		sc.nextLine();
 		if (s9 == 1) {
-			createProduct();
+			createProduct(n + 1, products);
 		} else if (s9 == 2) {
 			System.out.println("Введите название продукта, который надо удалить");
-			String s10 = sc.nextLine();
-			for (Product p : products) {
-				if (p.getName().equals(s10)) {
-					delProduct(p);
-					break;
-				}
-			}
+			String s10 = sc.next();
+			delProduct(s10, products);
 		} else if (s9 == 3) {
 			getBlaBlaBla();
 		}
 		sc.close();
 	}
 
-	public void createProduct() {
+	public void createProduct(int n, Product[] products) {
 
 		Scanner sc = new Scanner(System.in);
+		Product products1[] = new Product[n];
+		for (int i = 0; i < products.length; i++) {
+			products1[i] = products[i];
+		}
 		System.out.println("Введите название нового продукта");
 		String productName = sc.nextLine();
 		System.out.println("Введите цену этого продукта");
@@ -123,18 +114,31 @@ public class DealRefactor {
 		String type = sc.next();
 
 		if (type.equals("продукт1")) {
-			products.add(new Product1(productName, price, quantity, type));
+			products1[n - 1] = new Product1(productName, price, quantity, type);
 		} else if (type.equals("продукт2")) {
-			products.add(new Product2(productName, price, quantity, type));
+			products1[n - 1] = new Product2(productName, price, quantity, type);
 		} else if (type.equals("продукт3")) {
-			products.add(new Product3(productName, price, quantity, type));
+			products1[n - 1] = new Product3(productName, price, quantity, type);
 		}
+		setProducts(products1);
 		getBlaBlaBla();
 		sc.close();
 	}
 
-	public void delProduct(Product p) {
-		products.remove(p);
+	public void delProduct(String name, Product[] products) {
+		Product products1[] = new Product[products.length - 1];
+		int k = products.length;
+		for (int i = 0; i < products1.length; i++) {
+			if (products[i].name == name) {
+				k = i;
+				continue;
+			}
+			products1[i] = products[i];
+		}
+		if (k < products.length) {
+			products1[k] = products[products.length - 1];
+		}
+		setProducts(products1);
 		getBlaBlaBla();
 	}
 }

@@ -1,3 +1,4 @@
+package by.academy.classwork;
 
 public class Massive1 {
 

@@ -1,4 +1,4 @@
-package by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9;
+package homework.homework2.task_1_2_6_7_8_9;
 
 public class Product {
 	protected double price;
