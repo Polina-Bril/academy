@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Date {
+public class MyDate {
 
 	private String date;
 	private Year year;
@@ -12,11 +12,11 @@ public class Date {
 	private Day day;
 	public static Pattern p = Pattern.compile("^([0]?[1-9]|[1-9]|[1|2][0-9]|[3][0|1])-([0][1-9]|[1-9]|1[0-2])-\\d{4}");
 
-	public Date() {
+	public MyDate() {
 		super();
 	}
 
-	public Date(Day day, Month month, Year year) {
+	public MyDate(Day day, Month month, Year year) {
 		super();
 		this.day = day;
 		this.month = month;
@@ -25,7 +25,7 @@ public class Date {
 
 	}
 
-	public Date(String date) {
+	public MyDate(String date) {
 		Matcher m = p.matcher(date);
 		if (m.find()) {
 			System.out.println("Date is valid");
