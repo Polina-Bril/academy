@@ -11,14 +11,14 @@ public class Task1v11Collection {
 	// коллекцию уже без дубликатов.
 
 	public static void main(String[] args) {
-		Collection<Integer> collection = new ArrayList<Integer>();
-		collection.add(5);
-		collection.add(10);
-		collection.add(15);
-		collection.add(5);
-		System.out.println(collection);
-		Set <Integer> hashset=new HashSet<Integer>();
-hashset=		NoDoubles(collection);
+		Collection<Integer> myCollection = new ArrayList<Integer>();
+		myCollection.add(15);
+		myCollection.add(10);
+		myCollection.add(15);
+		myCollection.add(5);
+		System.out.println(myCollection);
+		Set<Integer> hashset = new HashSet<Integer>();
+		hashset = NoDoubles(myCollection);
 		System.out.println(hashset);
 
 		// List a = new List.of(1, 3, 5, 4, 7, 5);
@@ -26,8 +26,8 @@ hashset=		NoDoubles(collection);
 		//
 	}
 
-	public static HashSet<Integer> NoDoubles(Collection<Integer> array) {
-		return new HashSet<>(array);
+	public static HashSet<Integer> NoDoubles(Collection<Integer> collection) {
+		return new HashSet<>(collection);
 	}
 
 }

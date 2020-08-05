@@ -42,9 +42,7 @@ public class MyCustomDate {
 	}
 
 	public WeekDay getWeekDay() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(getDay()).append("-").append(getMonth()).append("-").append(getYear());
-		String date = sb.toString();
+		String date = this.toString();
 		SimpleDateFormat format = new SimpleDateFormat("dd-M-yyyy");
 		java.util.Date dayWeek = null;
 		try {
@@ -82,12 +80,8 @@ public class MyCustomDate {
 	}
 
 	public static long daysBetween(MyCustomDate date1, MyCustomDate date2) {
-		StringBuilder sb1 = new StringBuilder();
-		StringBuilder sb2 = new StringBuilder();
-		sb1.append(date1.getDay()).append("-").append(date1.getMonth()).append("-").append(date1.getYear());
-		String dateStr1 = sb1.toString();
-		sb2.append(date2.getDay()).append("-").append(date2.getMonth()).append("-").append(date2.getYear());
-		String dateStr2 = sb2.toString();
+		String dateStr1 = date1.toString();
+		String dateStr2 = date2.toString();
 		SimpleDateFormat format = new SimpleDateFormat("dd-M-yyyy");
 		java.util.Date day1 = null;
 		java.util.Date day2 = null;
