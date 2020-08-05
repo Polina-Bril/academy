@@ -20,10 +20,6 @@ public class Task1v11Collection {
 		Set<Integer> hashset = new HashSet<Integer>();
 		hashset = NoDoubles(myCollection);
 		System.out.println(hashset);
-
-		// List a = new List.of(1, 3, 5, 4, 7, 5);
-		// Set<Integer> hashset = new HashSet<Integer>(a);
-		//
 	}
 
 	public static HashSet<Integer> NoDoubles(Collection<Integer> collection) {
