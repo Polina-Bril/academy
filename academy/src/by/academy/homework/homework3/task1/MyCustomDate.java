@@ -13,7 +13,7 @@ public class MyCustomDate {
 
 	public MyCustomDate() {
 		super();
-		setDate("1-1-1900");
+		setDate("1-1-1901");
 	}
 
 	public MyCustomDate(String date) {

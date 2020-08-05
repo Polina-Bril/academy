@@ -6,8 +6,8 @@ public enum WeekDay {
 
 	private int value;
 
-	private WeekDay(int number) {
-		this.value = number;
+	private WeekDay(int number1) {
+		this.value = number1;
 	}
 
 	public int getValue() {

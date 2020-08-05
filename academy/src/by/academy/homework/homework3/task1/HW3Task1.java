@@ -1,14 +1,12 @@
 package by.academy.homework.homework3.task1;
 
-import by.academy.homework.homework3.task1.MyCustomDate;
-
 public class HW3Task1 {
 
 	public static void main(String[] agrs) {
 
 		MyCustomDate d1 = new MyCustomDate();
 		d1.setDate("05-08-2020");
-		MyCustomDate d2 = new MyCustomDate("29-04-1984");
+		MyCustomDate d2 = new MyCustomDate("29-04-1985");
 		MyCustomDate d3 = new MyCustomDate(6, 4, 1984);
 
 		System.out.println(d1.getWeekDay());
