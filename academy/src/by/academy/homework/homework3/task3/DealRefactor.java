@@ -5,14 +5,13 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.List;
 import java.util.Scanner;
 
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.Product;
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.Product1;
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.Product2;
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.Product3;
-import by.academy.homework2.dealRegExpStroki.task1_2_6_7_8_9.User;
+import by.academy.homework.homework2.task_1_2_6_7_8_9.User;
+import by.academy.homework.homework2.task_1_2_6_7_8_9.Product1;
+import by.academy.homework.homework2.task_1_2_6_7_8_9.Product2;
+import by.academy.homework.homework2.task_1_2_6_7_8_9.Product3;
+import by.academy.homework.homework2.task_1_2_6_7_8_9.Product;
 
 public class DealRefactor {
 
