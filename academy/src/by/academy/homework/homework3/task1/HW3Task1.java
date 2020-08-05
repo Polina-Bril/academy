@@ -1,21 +1,28 @@
 package by.academy.homework.homework3.task1;
 
+import by.academy.homework.homework3.task1.MyCustomDate;
+
 public class HW3Task1 {
-	
-	public static void main (String [] agrs) {
-	
-	MyDate d1= new MyDate();
-	MyDate.Day dd1 = new MyDate().new Day(6);
-	MyDate.Month mm1 = new MyDate().new Month(4);
-	MyDate.Year yy1 = new MyDate().new Year(1984);
-	MyDate d3= new MyDate (dd1, mm1, yy1);
-	
-	MyDate d2= new MyDate("29-04-1984");
-	System.out.println(d2.getWeekDay(d2.getDate()));
-	System.out.println(d2.numberOfDays(d2.getDate(), d3.getDate()));
-	
-	MyDate.Year yy2 = new MyDate().new Year(2011);	
-	System.out.println(yy2.isLeapYear(yy2.getYear()));
+
+	public static void main(String[] agrs) {
+
+		MyCustomDate d1 = new MyCustomDate();
+		d1.setDate("05-08-2020");
+		MyCustomDate d2 = new MyCustomDate("29-04-1984");
+		MyCustomDate d3 = new MyCustomDate(6, 4, 1984);
+
+		System.out.println(d1.getWeekDay());
+		System.out.println(d2.getWeekDay());
+		System.out.println(d3.getWeekDay());
+		System.out.println(MyCustomDate.daysBetween(d1, d3));
+		System.out.println(MyCustomDate.daysBetween(d1, d2));
+		System.out.println(MyCustomDate.daysBetween(d2, d3));
+		System.out.println(MyCustomDate.isLeapYear(d1.getYear()));
+		System.out.println(MyCustomDate.isLeapYear(d2.getYear()));
+		System.out.println(MyCustomDate.isLeapYear(d3.getYear()));
+		System.out.println(d1);
+		System.out.println(d2);
+		System.out.println(d3);
 	}
-	
+
 }
