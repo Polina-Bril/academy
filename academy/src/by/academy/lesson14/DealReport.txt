@@ -1,0 +1,4 @@
+Покупатель - Poli, продавец - Serge. Продукты в сделке: [Продукт [price=5.0, name=aaa, quantity=5, type=продукт2], Продукт [price=1.0, name=bbb, quantity=3, type=продукт2]]. Общая сумма сделки = 28.0
+Покупатель - Poli, продавец - Serge. Продукты в сделке: [Продукт [price=5.0, name=aaa, quantity=5, type=продукт2], Продукт [price=1.0, name=bbb, quantity=3, type=продукт2], Продукт [price=2.5, name=ccc, quantity=6, type=продукт2]]. Общая сумма сделки = 43.0
+Покупатель - eee, продавец - ddd. Продукты в сделке: [Продукт [price=1.8, name=aaa, quantity=3, type=продукт1], Продукт [price=4.5, name=bbb, quantity=6, type=продукт1]]. Общая сумма сделки = 32.4
+Покупатель - eee, продавец - ddd. Продукты в сделке: [Продукт [price=1.8, name=aaa, quantity=3, type=продукт1], Продукт [price=4.5, name=bbb, quantity=6, type=продукт1]]. Общая сумма сделки = 32.4
