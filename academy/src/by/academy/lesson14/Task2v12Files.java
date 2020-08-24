@@ -9,10 +9,10 @@ import java.nio.file.Path;
 import java.io.File;
 
 public class Task2v12Files {
-//	Переписать класс FileInputOutputStreamDemo: 
-//	a) Добавить блок try-with-resources. 
-//	б) Замените for (int i = 0; i < c.length; i++) на блок for-each.  
-//	в) Пусть file.txt записывается в каталог src/io. 
+	// Переписать класс FileInputOutputStreamDemo:
+	// a) Добавить блок try-with-resources.
+	// б) Замените for (int i = 0; i < c.length; i++) на блок for-each.
+	// в) Пусть file.txt записывается в каталог src/io.
 
 	public static void main(String[] args) {
 		File file = Path.of("academy", "src", "io", "2.txt").toFile();
@@ -26,8 +26,7 @@ public class Task2v12Files {
 				System.out.print((char) input.read() + " ");
 			}
 
-		}
-		catch (IOException e) {
+		} catch (IOException e) {
 			System.out.print("Exception");
 		}
 	}
