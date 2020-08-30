@@ -1,5 +1,5 @@
 package by.academy.lesson15;
 
 public interface Printable {
-	void print();
+	void print(String s);
 }

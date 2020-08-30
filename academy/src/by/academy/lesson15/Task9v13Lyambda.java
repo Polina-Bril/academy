@@ -6,8 +6,8 @@ package by.academy.lesson15;
 public class Task9v13Lyambda {
 
 	public static void main(String[] args) {
-
-		Printable obj = () -> Printable::print;
+		
+		Printable obj = System.out::println;
 		obj.print("Это моя первая лямбда");
 
 	}

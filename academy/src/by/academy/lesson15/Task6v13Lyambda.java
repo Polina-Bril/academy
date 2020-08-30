@@ -17,7 +17,6 @@ public class Task6v13Lyambda {
 		Consumer<HeavyBox> obj1 = boxik1 -> System.out.println("Отгрузили ящик с весом n");
 		Consumer<HeavyBox> obj2 = boxik2 -> System.out.println("Отправляем ящик с весом n");
 		obj1.andThen(obj2).accept(box);
-		;
 
 	}
 

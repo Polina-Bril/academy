@@ -7,8 +7,8 @@ public class Task1v13Lyambda {
 
 	public static void main(String[] args) {
 
-		Printable obj = () -> System.out.println("Это моя первая лямбда");
-		obj.print();
+		Printable obj = (s) -> System.out.println(s);
+		obj.print("Это моя первая лямбда");
 
 	}
 
