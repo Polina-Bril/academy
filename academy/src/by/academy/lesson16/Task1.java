@@ -26,6 +26,8 @@ public class Task1 {
 //				Collectors.mapping(lon->"Number: "+lon, Collectors.toList())));
 
 		System.out.println(map);
+		
+		
 
 	}
 
