@@ -15,15 +15,33 @@ a) Создать класс расширяющий Thread.
  */
 
 public class Task3 extends Thread {
+	
+	private StringBuilder builder;
+	
+
+	public Task3(StringBuilder builder) {
+		super();
+		this.builder = builder;
+	}
 
 	@Override
-	public void run() {
-
+	public  void run() {
+		synchronized (builder){
+			for(int i=0;i<100;i++) {
+			System.out.println(builder);
+			builder.append('a');
+			}
+		}
 	}
 
 	public static void main(String[] args) {
-		Integer i = 5;
-
+		StringBuilder build = new StringBuilder('a');
+		Thread my1 = new Thread(new Task3(build));
+		Thread my2 = new Thread(new Task3(build));
+		Thread my3 = new Thread(new Task3(build));
+		my1.start();
+		my2.start();
+		my3.start();
 	}
 
 }
