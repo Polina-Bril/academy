@@ -1,4 +1,4 @@
-package by.academy.homework.homework7;
+package by.academy.homework.homework7.consumerProduserDecision;
 
 public class HarborRunner {
 
