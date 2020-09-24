@@ -2,7 +2,7 @@ package by.academy.lesson19.task4;
 
 import java.util.Queue;
 
-public class MyQueue<T> {
+public class MyQueue<T extends Fruit> {
 	private Queue<T> queue;
 	boolean valueSet = false;
 
@@ -20,7 +20,7 @@ public class MyQueue<T> {
 		return queue;
 	}
 
-	public synchronized void put(T queue) {
+	public synchronized void put(Fruit fruit) {
 		while (valueSet) {
 			try {
 				wait();

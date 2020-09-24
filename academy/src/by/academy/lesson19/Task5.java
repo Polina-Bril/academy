@@ -13,12 +13,18 @@ public class Task5 {
 
 	public static void main(String[] args) {
 
-		System.out.println("Философ берет правую вилку");
-		System.out.println("Философ берет левую вилку");
-		System.out.println("Философ ест");
-		System.out.println("Философ кладет правую вилку");
-		System.out.println("Философ кладет левую вилку");
-		System.out.println("Философ размышляет");
+//		for (int i = 1; i <= 5; i++) {
+		Thread philosofer1 =new Thread(new Philosofer());
+		Thread philosofer2 =new Thread(new Philosofer());
+		Thread philosofer3 =new Thread(new Philosofer());
+		Thread philosofer4 =new Thread(new Philosofer());
+		Thread philosofer5 =new Thread(new Philosofer());
+//		}
+		philosofer1.start();
+		philosofer2.start();
+		philosofer3.start();
+		philosofer4.start();
+		philosofer5.start();
 	}
 
 }
