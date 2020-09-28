@@ -1,6 +1,9 @@
 package by.academy.lesson20;
 
 import java.util.List;
+/*
+ * payment не интерфейс, а включается в класс кастомер
+ */
 
 public class Customer implements Payment {
 
